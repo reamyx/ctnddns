@@ -1,0 +1,9 @@
+#srv记录配置文件,由第三方程序或手动添加配置项
+#srv-host=<_service>.<_prot>.[<domain>],[<target>[,<port>[,<priority>[,<weight>]]]]
+#域名<domain>可省略以使用( domain= )选项配置的域名
+#若目标<target>在本地域主机名可以使用简短名称
+
+#srv-host=_etcd-server._tcp.srvrcd.local,etcd193,2380,1,1
+#srv-host=_etcd-server._tcp.srvrcd.local,etcd194,2380,2,1
+#srv-host=_etcd-server._tcp.srvrcd.local,etcd195,2380,3,1
+

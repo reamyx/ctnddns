@@ -1,0 +1,4 @@
+#chname别名记录配置文件,由第三方程序或手动添加配置项
+# --cname=<cname>,<target>[,<TTL>]
+
+

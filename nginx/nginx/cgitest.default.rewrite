@@ -1,0 +1,29 @@
+#于当前目录创建以".default.rewrite"结尾的rewrite规则文件会在nginx服务
+#启动时被默认服务器(default)加载,默认服务器以重写规则结合location定义
+#来简化服务器执行指定应用的重定向配置.
+#路径定向,其规则如下:
+#
+#   shell脚本程序:  "Shell-CGI-"开头  => localhost:8001(FastCGI)
+#   PHP应用程序:    "PHP-CGI-"开头    => localhost:8002(FastCGI)
+#   python应用程序: "Python-CGI-"开头 => localhost:8003(WSGI)
+#   ......
+
+
+#Fcgiwrap
+rewrite ^/cgitest$ /Shell-CGI-cgitest.sh last;
+
+#PHP应用
+rewrite ^/phpcgitest$ /PHP-CGI-cgitest.sh last;
+
+#python3应用
+rewrite ^/py3cgitest$ /Python3-CGI-cgitest.sh last;
+
+#python2应用
+rewrite ^/py2cgitest$ /Python2-CGI-cgitest.sh last;
+
+#lua应用
+rewrite ^/luacgitest$ /Lua-CGI-cgitest.sh last;
+
+#CGI应用
+rewrite ^/cmncgitest$ /Common-CGI-cgitest.sh last;
+

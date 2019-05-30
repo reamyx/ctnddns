@@ -1,0 +1,32 @@
+{
+  "initdelay": 2,
+  "workstart": "./dnsmasqstart.sh",
+  "workwatch": 15,
+  "workintvl": 3,
+  "firewall": {
+    "tcpportpmt": "53",
+    "udpportpmt": "53",
+    "icmppermit": "yes"
+  },
+  "ovpnser": {
+    "enable":  "no",
+    "srvport": "",
+    "defuser": "",
+    "defpswd": ""
+  },
+  "ovpnclt": {
+    "enable":   "no",
+    "rmtport":  "",
+    "rmtaddr":  "",
+    "username": "",
+    "password": ""
+  },
+  "dnsmasq": {
+    "namemap": "yes",
+    "urlpswd": "",
+    "srvport": "",
+    "webport": "",
+    "domains": ""
+  }
+}
+

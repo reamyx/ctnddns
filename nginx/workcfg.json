@@ -1,0 +1,19 @@
+{
+  "initdelay": 2,
+  "workstart": "./nginxstart.sh",
+  "workwatch": 15,
+  "workintvl": 3,
+  "firewall": {
+    "tcpportpmt": "1280",
+    "udpportpmt": "",
+    "icmppermit": "yes"
+  },
+  "nginx": {
+    "srvport":  "",
+    "lcgwsrv":  "",
+    "lcgwtpye": "",
+    "lcgwfile": "",
+    "fcgiwrap": "no"
+  }
+}
+

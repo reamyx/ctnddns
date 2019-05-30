@@ -1,0 +1,12 @@
+
+#Nginx状态(示例配置中的认证账号 nginxst/nginxst000 )
+
+#htpasswd文件的内容可以用apache提供的htpasswd工具来产生
+#touch state.users; htpasswd -b state.users nginxst nginxst000
+
+location = /ngxstate {
+	stub_status on;
+	access_log ../logs/state.access.log;
+	auth_basic "nginxst";
+	auth_basic_user_file state.users;
+	}

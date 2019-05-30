@@ -1,0 +1,35 @@
+#动态server专用配置文件,可用于上游或特定子域服务器配置.
+#仅 --server 和 --rev-server 可用,可被SIGHUP信号re-read.
+#
+#状态监测模式下子域服务器测试程序会周期性PING测试使用特
+#定前缀"#>>>"注释的或当前的"子域配置项"中的主机地址的连
+#通性并根据测试结果执行行激活或去活操作.
+#
+# --server=[/[<domain>]/[domain/]][<ipaddr>[#<port>][@<source-ip>|<interface>[#<port>]]
+
+#主(公共)DNS服务器
+#它们不会被子域服务器测试程序处理
+
+#DNSPod
+server=119.29.29.29
+#阿里
+server=223.5.5.5
+#CNNIC SDNS
+server=1.2.4.8
+#百度
+server=180.76.76.76
+#114DNS
+server=114.114.114.114
+
+
+#特定子域DNS
+# server=/ln.600vps.com/192.168.175.101#53
+
+
+#常规注释的子域项不会被子域服务器测试程序处理
+# server=/ln.600vps.com/192.168.175.102#53
+# server=/ln.600vps.com/192.168.175.103#53
+# server=/ln.600vps.com/192.168.175.104#53
+
+
+
