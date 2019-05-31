@@ -16,8 +16,7 @@ docker container run --detach --restart always \
 --device /dev/ppp --device /dev/net/tun \
 --volume /etc/localtime:/etc/localtime:ro \
 --publish 53:53/udp --publish 1253:1253/tcp \
---publish 1258:1258/tcp --env "SRVCFG=$SRVCFG" \
-registry.cn-hangzhou.aliyuncs.com/zhixia/imginit:dnsmasq
+--publish 1258:1258/tcp --env "SRVCFG=$SRVCFG" ctnddns
 
 docker container exec -it ddns00 bash
 curl http://brxa.600vps.com:1253/namemapv2?list
@@ -36,8 +35,7 @@ docker container run --detach --restart always \
 --network imvn --cap-add NET_ADMIN \
 --device /dev/ppp --device /dev/net/tun \
 --volume /etc/localtime:/etc/localtime:ro \
---env "SRVCFG=$SRVCFG" --ip 192.168.15.192 \
-registry.cn-hangzhou.aliyuncs.com/zhixia/imginit:dnsmasq
+--ip 192.168.15.192 --env "SRVCFG=$SRVCFG" ctnddns
 
 docker container exec -it ddns192 bash
 curl http://192.168.15.192:1253/namemapv2?list
